@@ -1,0 +1,62 @@
+/* css for medium devices e.g. ipad or other tablets */
+body {
+	font-size: 1.1em;
+    line-height: 1.4em;
+}
+
+p:not(.indexFont) {
+	max-width: 30em;
+}
+
+h1 {
+	text-align:center;
+}
+
+.content {
+    -moz-column-count: 3;
+    -webkit-column-count: 3;
+    column-count: 3;
+    -moz-column-gap: 1em;
+    -webkit-column-gap: 1em;
+    column-gap: 1em;
+}
+
+img:not(.indexImg .bg_gray) {
+	max-width: 26em;
+}
+
+.indexImg {
+	border-radius:20px;
+	text-align: center;
+	width: 100%;
+	height:320px;
+}
+
+.indexFont {
+	width: 90%;
+	text-align: center;
+	margin: 20px;
+	font-size:16px;
+}
+
+.sidebar-list-item, .sidebar-list-category {
+	width: 100%;
+	border-bottom: 1px solid #242424;
+    border-top: 1px solid #707070;
+    display: block;
+    min-height: 52px;
+    padding: 0 18px 0 0;
+}
+.item-image {
+	width: 40px;
+	height: 40px;
+	margin: 6px;
+	float: left;
+}
+.item-text {
+	margin-left: 44px;
+	color: white;
+    font-family: Verdana,sans-serif;
+    font-size: 0.8em;
+    line-height: 1em;
+}

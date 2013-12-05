@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project name="html5magazine" basedir="." default="main">
+	<description>
+		this is a html5magazine
+	</description>
+	<property name="css.dir" value="css" />
+	<property name="js.dir" value="js" />
+	<property name="jslib.dir" value="${js.dir}/lib" />
+	<property name="demo.dir" value="demo" />
+	<property name="images.dir" value="images" />
+	<property name="weizhoukan.dir" value="weizhoukan" />
+	<property name="build.dir" value="build" />
+	<property name="lib.dir" value="lib" />
+	
+	<path id="yuiClasspath">
+		<fileset dir="${lib.dir}">
+			<include name="yuicompressor-2.4.8pre.jar" />
+			<include name="YUIAnt.jar" />
+		</fileset>
+	</path>
+	
+	<target name="clean">
+		<delete dir="${build.dir}" />
+		<delete file="build.zip" />
+		<delete file="build.tar" />
+	</target>
+	
+	<target name="compile">
+		<echo>hello</echo>
+		<mkdir dir="${build.dir}" />
+		<mkdir dir="${build.dir}/js" />
+		<mkdir dir="${build.dir}/css" />
+		<mkdir dir="${build.dir}/demo" />
+		<mkdir dir="${build.dir}/images" />
+		<mkdir dir="${build.dir}/weizhoukan" />
+		<copy todir="${build.dir}/js">
+			<fileset dir="${js.dir}" includes="**/*.js" excludes="" />
+		</copy>
+		<copy todir="${build.dir}/css">
+			<fileset dir="${css.dir}" includes="**/*.css" excludes="" />
+		</copy>
+		<copy todir="${build.dir}/demo">
+			<fileset file="${demo.dir}/demo.html" />
+		</copy>
+		<copy todir="${build.dir}/images">
+			<fileset dir="${images.dir}" excludes="">
+				<include name="**/*.jpg" />
+				<include name="**/*.png" />
+				<include name="**/*.gif" />
+			</fileset>
+		</copy>
+		<copy todir="${build.dir}/weizhoukan">
+			<fileset dir="${weizhoukan.dir}" excludes="" />
+		</copy>
+		<zip destfile="build.zip">
+			<fileset dir="${build.dir}" />
+		</zip>
+		<tar destfile="build.tar">
+			<fileset dir="${build.dir}" />
+		</tar>
+	</target>
+	
+	<target name="init">
+		<delete file="${jslib.dir}/iScroll.min.js" />
+		<delete file="${jslib.dir}/zepto.min.js" />
+		<delete file="${js.dir}/magazine.min.js" />
+		<delete file="${js.dir}/canvas.min.js" />
+	</target>
+	<target name="jslibcompress" depends="init">
+		<property name="yui.compress" value="${lib.dir}/yuicompressor-2.4.8pre.jar" />
+		<apply executable="java" parallel="false" verbose="true" dest="${jslib.dir}" taskname="jslib.compile">
+			<fileset dir="${jslib.dir}">
+				<include name="iScroll.js" />
+				<include name="zepto.js" />
+			</fileset>
+			<arg line="-jar" />
+			<arg path="${yui.compress}" />
+			<arg line="--type js --charset UTF-8 -o" />
+			<mapper type="glob" from="*.js" to="*.min.js" />
+			<targetfile />
+		</apply>
+	</target>
+	<target name="compress" depends="jslibcompress">
+		<property name="yui.compress" value="${lib.dir}/yuicompressor-2.4.8pre.jar" />
+		<apply executable="java" parallel="false" verbose="true" dest="${js.dir}" taskname="js.compile">
+			<fileset dir="${js.dir}">
+				<include name="canvas.js" />
+				<include name="magazine.js" />
+			</fileset>
+			<arg line="-jar" />
+			<arg path="${yui.compress}" />
+			<arg line="--type js --charset UTF-8 -o" />
+			<mapper type="glob" from="*.js" to="*.min.js" />
+			<targetfile />
+		</apply>
+	</target>
+	<target name="yuicompress">
+		<mkdir dir="${build.dir}" />
+		<taskdef name="yuicompress" classname="com.yahoo.platform.yui.compressor.YUICompressTask">
+			<classpath>
+				<path refid="yuiClasspath" />
+			</classpath>
+		</taskdef>
+		<yuicompress linebreak="300" warn="false" munge="yes"
+			preserveallsemicolons="true" outputfolder="${build.dir}" charset="utf-8">
+			<fileset dir="${js.dir}">
+				<include name="magazine.js" />
+				<include name="canvas.js" />
+			</fileset>
+		</yuicompress>
+	</target>
+	
+	<target name="main" depends="compress" description="compress js">
+		
+	</target>
+</project>

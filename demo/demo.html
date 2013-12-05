@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>magazine</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-statue-bar-style" content="black" />
+		<link rel="stylesheet" href="../css/style.css" media="all" />
+		<!-- landscape 横屏 -->
+		<link rel="stylesheet" href="../css/small.css" media="all and (max-width: 33.236em) and (orientation: landscape)" />
+		<!-- portrait 竖屏 -->
+		<link rel="stylesheet" href="../css/small.portrait.css" media="all and (max-width: 33.236em) and (orientation: portrait)" />
+		<link rel="stylesheet" href="../css/medium.css" media="all and (min-width: 33.236em) and (max-width: 63.236em) and (orientation: landscape)" />
+		<link rel="stylesheet" href="../css/medium.portrait.css" media="all and (min-width: 33.236em) and (max-width: 63.236em) and (orientation: portrait)" />
+		<link rel="stylesheet" href="../css/large.css" media="all and (min-width: 63.236em) and (orientation: landscape)" />
+		<link rel="stylesheet" href="../css/large.portrait.css" media="all and (min-width: 63.236em) and (orientation: portrait)" />
+		<!--<link rel="stylesheet" href="../css/small.css" media="all and (max-width: 33.236em)" />
+		<link rel="stylesheet" href="../css/medium.css" media="all and (min-width: 33.236em) and (max-width: 63.236em)" />
+		<link rel="stylesheet" href="../css/large.css" media="all and (min-width: 63.236em)" />-->
+		<style type="text/css">
+			
+		</style>
+		<script type="text/javascript">
+			var path = "../";
+		</script>
+	</head>
+	<body>
+		<div id="mg-loader">
+			<p>html5研究小组</p>
+		</div>
+		<header id="header">html5研究小组<div><img src="../images/header_html5.jpg"></img>微周刊（2011.12.12~12.18）</div></header>
+		<div id="mg-container">
+			<div id="currentPeriod" class=""></div>
+			<div id="mg-slider">
+				<section id="mg-slide-0" class="mg-slider-page">
+					
+				</section>
+				<section id="mg-slide-1" class="mg-slider-page">
+					
+				</section>
+				<section id="mg-slide-2" class="mg-slider-page">
+					
+				</section>
+				<section id="mg-slide-3" class="mg-slider-page">
+					
+				</section>
+				<section id="mg-slide-4" class="mg-slider-page">
+					
+				</section>
+			</div>
+		</div>
+		<footer id="footer">第1页</footer>
+		<div id="mg-sidebar" style="overflow:hidden">
+		</div>
+		<button id="mg-sidebar-button-open">
+			<span>浏览</span>
+		</button>
+		<button id="mg-sidebar-button-close">
+			<span>隐藏</span>
+		</button>
+		<script type="text/javascript">
+			function setHeight() {
+				var headerH = document.getElementById('header').offsetHeight,
+					footerH = document.getElementById('footer').offsetHeight,
+					wrapperH = window.innerHeight - headerH - footerH;
+				document.getElementById('mg-container').style.height = wrapperH + 'px';
+			}
+			setHeight();
+			window.addEventListener('resize', setHeight, false);
+		</script>
+		<script type="text/javascript" src="../js/lib/zepto.min.js"></script>
+		<script type="text/javascript" src="../js/lib/iScroll.min.js"></script>
+		<script type="text/javascript" src="../js/lib/flicklist.js"></script>
+		<script type="text/javascript" src="../js/lib/kinetic.js"></script>
+		<script type="text/javascript" src="../js/canvas.min.js"></script>
+		<script type="text/javascript" src="../js/magazine.min.js"></script>
+		<script type="text/javascript">
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-29850324-2']);
+			_gaq.push(['_trackPageview']);
+
+			(function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+		</script>
+	</body>
+</html>

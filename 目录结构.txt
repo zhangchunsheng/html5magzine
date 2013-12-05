@@ -1,0 +1,22 @@
+html5magzine--|
+              |--index.html 程序主入口
+              |
+              |--css 样式
+              |
+              |--demo 例子
+              |
+              |--doc 文档
+			      |
+				  |--------design 设计文档
+			  |
+			  |--images 图片
+			  |
+			  |--js js文件
+			  |
+			  |--res
+			      |
+				  |--------HTML5研究小组《微周刊》第26期.pdf
+			  |
+			  |--weizhoukan
+			        |
+					|---------26 html版微周刊

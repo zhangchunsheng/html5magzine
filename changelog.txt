@@ -1,0 +1,46 @@
+[html5magazine_A.0.0.1 2012-02-28 peter]
+1、更新目录结构
+
+[html5magazine_A.0.0.1 2012-03-08 peter]
+1、新增功能：
+pc端：j - 隐藏/显示页眉页脚
+	  左方向键 - 上一页
+	  右方向键 - 下一页
+移动端：单击 - 隐藏/显示页眉页脚
+2、调整页眉内容
+3、调整杂志内容：增加标题颜色；增加链接
+
+[html5magazine_A.0.0.1 2012-03-13 peter]
+1、新增功能：
+更改url浏览杂志，在url后增加#(期刊号)，如
+http://zreader.sinaapp.com/magzine/demo/demo.html#27，
+则浏览第27期杂志
+2、增加《微周刊》
+
+[html5magazine_A.0.0.1 2012-03-14 peter]
+1、增加《微周刊》超链接
+
+[html5magazine_A.0.0.1 2012-03-15 peter]
+1、新功能：
+移动端：连续点击两次隐藏/显示页眉页脚
+2、新功能：
+通过url定位杂志，如：
+http://localhost/phone/book/html5magzine/demo/demo.html#27
+则定位到第27期杂志
+3、新功能：
+点击超链接浏览器其它网页，点击“返回”回到正在阅读页面
+4、bug:
+pc端单击执行翻页方法
+5、bug:
+pc端防止鼠标上下滑动调用翻页方法
+6、《微周刊》
+增加《微周刊》第31期
+7、网络优化
+压缩js文件
+8、适配
+杂志已适配iphone、ipad、pc端，推荐使用ipad
+9、调整sessionStorage策略
+
+[html5magazine_A.0.0.1 2012-03-22 peter]
+1、《微周刊》
+增加《微周刊》第32期

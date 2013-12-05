@@ -1,0 +1,35 @@
+{
+	"version": 1,
+	"title": "《微周刊》26期",
+	"author": "html5研究小组",
+	"creator": "html5研究小组",
+	"date": "2012-02-28",
+	"url": "",
+	
+	"orientation": "both",
+	"zoomable": false,
+	"fullpage": true,
+	"animationTime": 300,
+	
+	"contents": [
+		"1.html",
+		"2.html",
+		"3.html",
+		"4.html",
+		"5.html",
+		"6.html",
+		"1.html"
+	],
+	"category": [
+		"26",
+		"26",
+		"26",
+		"26",
+		"26",
+		"26",
+		"26"
+	],
+	
+	"sidebar": true,
+	"sidebarFixed": true
+}
