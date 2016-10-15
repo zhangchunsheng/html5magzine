@@ -1,6 +1,8 @@
 html5magzine
 ============
 
+[![Build Status](https://travis-ci.org/jfaster/mango.svg?branch=master)](https://travis-ci.org/zhangchunsheng/html5magzine)
+
 html5magzine
 
 html5杂志 微周刊 杂志
@@ -19,6 +21,7 @@ html5杂志 微周刊 杂志
 
 提交代码前请先更新
 
+```
 html5magzine--|
              |--index.html 程序主入口
              |
@@ -41,3 +44,4 @@ html5magzine--|
                          |--weizhoukan
                                |
                                        |---------26 html版微周刊
+```
