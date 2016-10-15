@@ -1,7 +1,7 @@
 html5magzine
 ============
 
-[![Build Status](https://travis-ci.org/jfaster/mango.svg?branch=master)](https://travis-ci.org/zhangchunsheng/html5magzine)
+[![Build Status](https://travis-ci.org/zhangchunsheng/html5magzine.svg?branch=master)](https://travis-ci.org/zhangchunsheng/html5magzine)
 
 html5magzine
 
